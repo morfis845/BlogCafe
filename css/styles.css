@@ -189,6 +189,12 @@ img {
 
 .boton--primario {
     background-color: var(--negro);
+    width: 100%;
+}
+@media (min-width: 426px){
+    .boton--primario{
+        width: max-content;
+    }
 }
 
 .boton--secundario {
@@ -276,13 +282,20 @@ img {
 .formulario {
     background-color: var(--blanco);
     margin: -5rem auto 0 auto;
+    min-width: 32rem;
     width: 95%;
     padding: 5rem;
 }
 
 .campo {
-    display: flex;
-    margin-bottom: 2rem;
+    display: block;
+    width: 100%;
+}
+@media (min-width: 426px){
+    .campo{
+        display: flex;
+         margin-bottom: 2rem;
+    }
 }
 
 .campo__label {
@@ -291,11 +304,23 @@ img {
     padding-right: 2rem;
 }
 
-.campo__field {
-    flex: 1;
+.campo__field{
+    width: 100%;
     border: 1px solid var(--gris);
 }
 
-.campo__field--textarea {
-    height: 20rem;
+@media (min-width: 426px){
+    .campo__field {
+        flex: 1;
+        border: 1px solid var(--gris);
+    }
+}
+
+.campo__field--textarea{
+    height: 10rem;
+}
+@media (min-width: 768px){
+    .campo__field--textarea {
+        height: 20rem;
+    }
 }
